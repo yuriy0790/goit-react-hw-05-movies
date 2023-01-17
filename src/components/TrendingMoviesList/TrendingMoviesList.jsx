@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const List = styled('ul')`
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 10px;
 `;
 
 const LinkItem = styled(Link)`
@@ -32,6 +32,7 @@ const LinkItem = styled(Link)`
     color: #ca3fdd;
     background-color: #ffd0f448;
     border-color: #8c46a37e;
+    transform: scale(1.02);
   }
 `;
 

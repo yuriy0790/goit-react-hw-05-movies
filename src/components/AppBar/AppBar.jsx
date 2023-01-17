@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { BsStack } from 'react-icons/bs';
+import { BiCameraMovie, BiSearchAlt } from 'react-icons/bi';
 
 const navItems = [
-  { href: '/', text: 'Home', icon: BsStack },
-  { href: 'movies', text: 'Movies', icon: BsStack },
+  { href: '/', text: 'Home', icon: BiCameraMovie },
+  { href: 'movies', text: 'Movies', icon: BiSearchAlt },
 ];
 
 const Nav = styled('nav')`
@@ -24,8 +24,8 @@ const NavItem = styled(NavLink)`
   border-radius: 4px;
   text-decoration: none;
   color: #000000;
-  background-color: #ffffff;
-
+  background-color: transparent;
+  border: 1px solid #8c46a3;
   &.active {
     background-color: #b161f7;
     border: 2px solid #8c46a3;
@@ -34,7 +34,9 @@ const NavItem = styled(NavLink)`
 
   :hover:not(.active),
   :focus-visible:not(.active) {
-    color: #b161f7;
+    color: #ffffff;
+    border: 2px solid #8c46a3;
+    transform: scale(1.03);
   }
 `;
 
@@ -43,7 +45,7 @@ const AppBar = () => {
     <Nav>
       {navItems.map(({ href, text, icon: Icon }) => (
         <NavItem to={href} key={href}>
-          <Icon size="16" />
+          <Icon size="20" />
           {text}
         </NavItem>
       ))}

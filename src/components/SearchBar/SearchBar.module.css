@@ -24,7 +24,7 @@
   width: 100%;
   max-width: 600px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 8px;
   overflow: hidden;
   border: 3px solid #8c46a3;
 }
@@ -42,6 +42,7 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   outline: none;
+  border-radius: 50%;
 }
 
 .SearchFormButton:hover {
@@ -66,11 +67,13 @@
   width: 100%;
   font: inherit;
   font-size: 20px;
+
   border: none;
+
   outline: none;
   padding-left: 4px;
   padding-right: 4px;
-  color: #b749c3;
+  color: #d86ce4;
 }
 
 .SearchFormInput::placeholder {

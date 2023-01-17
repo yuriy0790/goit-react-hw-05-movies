@@ -14,13 +14,13 @@ const LinkItem = styled(Link)`
   display: flex;
   gap: 5px;
   flex-wrap: nowrap;
-  flex-basis: 45%;
-  min-width: 180px;
-  border: 2px solid #692b2b;
+  flex-basis: 49%;
+  min-width: 250px;
+  border: 2px solid #8c46a3;
   border-radius: 4px;
   text-decoration: none;
   font-size: 20px;
-  color: #de9494;
+  color: #75367d;
 
   &.active {
     background-color: blue;
@@ -29,7 +29,9 @@ const LinkItem = styled(Link)`
 
   :hover:not(.active),
   :focus-visible:not(.active) {
-    color: #ff006f;
+    color: #ca3fdd;
+    background-color: #ffd0f448;
+    border-color: #8c46a37e;
   }
 `;
 

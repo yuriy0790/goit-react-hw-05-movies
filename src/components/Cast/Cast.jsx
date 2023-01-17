@@ -1,5 +1,5 @@
 const Cast = () => {
-  return;
+  return <div>Cast is here</div>;
 };
 
 export default Cast;

@@ -84,10 +84,10 @@ const MovieDetails = () => {
         movieInfo && <MovieInfo movieInfo={movieInfo} />
       )}
       <h2>Additional information</h2>
-      <LinkItem to={'cast'} state={{ from: location.state.from }}>
+      <LinkItem to={'cast'} state={{ from: location.state?.from ?? '/' }}>
         Cast
       </LinkItem>
-      <LinkItem to={'reviews'} state={{ from: location.state.from }}>
+      <LinkItem to={'reviews'} state={{ from: location.state?.from ?? '/' }}>
         Reviews
       </LinkItem>
       <Outlet />

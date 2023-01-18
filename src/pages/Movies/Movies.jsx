@@ -8,7 +8,6 @@ import Loader from 'components/Loader/Loader';
 import SearchBar from 'components/SearchBar/SearchBar';
 
 const Movies = () => {
-  // const [query, setQuery] = useState('');
   const [foundMovies, setFoundMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();

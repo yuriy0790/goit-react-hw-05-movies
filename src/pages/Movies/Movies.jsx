@@ -11,7 +11,7 @@ const Movies = () => {
   // const [query, setQuery] = useState('');
   const [foundMovies, setFoundMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     const query = searchParams.get('query') ?? '';
@@ -33,14 +33,14 @@ const Movies = () => {
       .finally(() => setIsLoading(false));
   }, [searchParams]);
 
-  // const formSubmitHandler = searchQuery => {
-  //   setQuery(searchQuery);
-  //   setFoundMovies([]);
-  // };
+  const formSubmitHandler = searchQuery => {
+    setSearchParams({ query: searchQuery });
+    setFoundMovies([]);
+  };
 
   return (
     <main>
-      <SearchBar />
+      <SearchBar onSubmit={formSubmitHandler} />
       {isLoading ? (
         <Loader />
       ) : (

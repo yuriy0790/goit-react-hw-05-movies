@@ -78,7 +78,8 @@ const MovieDetails = () => {
 
   return (
     <main>
-      <Link to={location.state.from}>GO BACK</Link>
+      <Link to={location.state?.from ?? '/'}>GO BACK</Link>
+      {/* <Link to={location.state.from}>GO BACK</Link> */}
       {isLoading ? (
         <Loader />
       ) : (

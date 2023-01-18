@@ -7,8 +7,8 @@ import Loader from 'components/Loader/Loader';
 
 import MovieInfo from 'components/MovieInfo/MovieInfo';
 import movieDetailsAPI from 'services/movieDetailsAPI';
-import Cast from 'components/Cast/Cast';
-import Reviews from 'components/Reviews/Reviews';
+// import Cast from 'components/Cast/Cast';
+// import Reviews from 'components/Reviews/Reviews';
 
 const MovieDetails = () => {
   const { movieId } = useParams();

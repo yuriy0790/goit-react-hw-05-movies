@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 import { ListItem, List } from './Cast.Styled';
 
 import Loader from 'components/Loader/Loader';
-import movieCastAPI from 'services/movieCastAPI';
+// import movieCastAPI from 'services/movieCastAPI';
+import { movieCastAPI } from 'services/movieDataAPI';
 
 const Cast = () => {
   const { movieId } = useParams();

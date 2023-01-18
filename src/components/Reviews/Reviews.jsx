@@ -5,7 +5,8 @@ import { useState, useEffect } from 'react';
 import { ListItem, List } from './Reviews.Styled';
 
 import Loader from 'components/Loader/Loader';
-import movieReviewsAPI from 'services/movieReviewsAPI';
+// import movieReviewsAPI from 'services/movieReviewsAPI';
+import { movieReviewsAPI } from 'services/movieDataAPI';
 
 const Reviews = () => {
   const { movieId } = useParams();

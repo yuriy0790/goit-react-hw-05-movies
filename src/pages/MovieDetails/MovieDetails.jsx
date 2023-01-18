@@ -7,7 +7,8 @@ import { LinkItem } from './MovieDetails.Styled';
 
 import Loader from 'components/Loader/Loader';
 import MovieInfo from 'components/MovieInfo/MovieInfo';
-import movieDetailsAPI from 'services/movieDetailsAPI';
+// import movieDetailsAPI from 'services/movieDetailsAPI';
+import { movieDetailsAPI } from 'services/movieDataAPI';
 
 const MovieDetails = () => {
   const { movieId } = useParams();

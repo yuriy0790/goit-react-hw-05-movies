@@ -2,10 +2,11 @@ import Notiflix from 'notiflix';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import searchMoviesAPI from 'services/searchMoviesAPI';
 import TrendingMoviesList from 'components/TrendingMoviesList/TrendingMoviesList';
 import Loader from 'components/Loader/Loader';
 import SearchBar from 'components/SearchBar/SearchBar';
+// import searchMoviesAPI from 'services/searchMoviesAPI';
+import { searchMoviesAPI } from 'services/movieDataAPI';
 
 const Movies = () => {
   const [foundMovies, setFoundMovies] = useState([]);

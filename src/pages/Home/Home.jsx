@@ -1,8 +1,10 @@
-import trendingMoviesAPI from 'services/trendingMoviesAPI';
 import Notiflix from 'notiflix';
 import { useState, useEffect } from 'react';
+
 import TrendingMoviesList from 'components/TrendingMoviesList/TrendingMoviesList';
 import Loader from 'components/Loader/Loader';
+// import trendingMoviesAPI from 'services/trendingMoviesAPI';
+import { trendingMoviesAPI } from 'services/movieDataAPI';
 
 const Home = () => {
   const [trendingMovies, setTrendingMovies] = useState([]);

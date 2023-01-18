@@ -4,11 +4,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import { GlobalStyle } from './styles/GlobalStyle';
 
 import Layout from './components/Layout/Layout';
-// import Movies from './pages/Movies/Movies';
-// import Home from './pages/Home/Home';
-// import MovieDetails from './pages/MovieDetails/MovieDetails';
-// import Cast from './components/Cast/Cast';
-// import Reviews from './components/Reviews/Reviews';
+
 const Home = lazy(() => import('./pages/Home/Home'));
 const Movies = lazy(() => import('./pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('./pages/MovieDetails/MovieDetails'));

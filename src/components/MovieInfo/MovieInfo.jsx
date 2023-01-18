@@ -1,23 +1,6 @@
 import PropTypes from 'prop-types';
-// import styles from './ImageGallery.module.css';
-// import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
-import styled from 'styled-components';
-// import { Link } from 'react-router-dom';
 
-const Section = styled('section')`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-`;
-
-const InfoWrap = styled('div')`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 320px;
-  max-width: 60%;
-  gap: 20px;
-`;
+import { Section, InfoWrap } from './MovieInfo.Styled';
 
 const MovieInfo = ({
   movieInfo: { poster_path, title, release_date, genres, overview, userScore },

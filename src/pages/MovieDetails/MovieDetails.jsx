@@ -78,8 +78,8 @@ const MovieDetails = () => {
 
   return (
     <main>
+      {/* не працює go-back після відкриття акторів або рецензій (переходить на '/') */}
       <Link to={location.state?.from ?? '/'}>GO BACK</Link>
-      {/* <Link to={location.state.from}>GO BACK</Link> */}
       {isLoading ? (
         <Loader />
       ) : (

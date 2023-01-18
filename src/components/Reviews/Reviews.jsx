@@ -31,7 +31,6 @@ const ListItem = styled('li')`
 
 const Reviews = () => {
   const { movieId } = useParams();
-  console.log(movieId);
   const [reviewsInfo, setReviewsInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -39,8 +38,6 @@ const Reviews = () => {
     setIsLoading(true);
     movieReviewsAPI(movieId)
       .then(({ results }) => {
-        console.log('reviews :', results);
-
         setReviewsInfo(results);
       })
       .catch(() => {

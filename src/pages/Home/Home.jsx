@@ -12,7 +12,6 @@ const Home = () => {
     setIsLoading(true);
     trendingMoviesAPI()
       .then(({ results }) => {
-        console.log('results', results);
         if (!results.length) {
           Notiflix.Notify.failure('Oops, list is empty...');
           return;

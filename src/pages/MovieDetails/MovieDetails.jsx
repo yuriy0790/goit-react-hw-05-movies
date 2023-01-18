@@ -43,8 +43,6 @@ const MovieDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
 
-  console.log(location);
-
   useEffect(() => {
     setIsLoading(true);
     movieDetailsAPI(movieId)

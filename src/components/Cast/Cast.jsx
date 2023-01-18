@@ -43,7 +43,6 @@ const ListItem = styled('li')`
 
 const Cast = () => {
   const { movieId } = useParams();
-  console.log(movieId);
   const [castInfo, setCastInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -51,7 +50,6 @@ const Cast = () => {
     setIsLoading(true);
     movieCastAPI(movieId)
       .then(results => {
-        console.log('cast :', results.cast);
         const processedCast = results.cast.map(
           ({ profile_path, character, name, id }) => ({
             id,
@@ -60,7 +58,6 @@ const Cast = () => {
             profile_path: `http://image.tmdb.org/t/p/w342${profile_path}`,
           })
         );
-        console.log('processedCast :', processedCast);
         setCastInfo(processedCast);
       })
       .catch(() => {

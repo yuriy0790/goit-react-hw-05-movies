@@ -57,13 +57,13 @@ const Reviews = () => {
         <List>
           {reviewsInfo.map(({ author, content, id }) => (
             <ListItem key={id}>
-              <p>{author}</p>
+              <p>Author: {author}</p>
               <p>{content}</p>
             </ListItem>
           ))}
         </List>
       ) : (
-        <p>No reviews</p>
+        <p>We don't have any reviews for this movie yet</p>
       )}
     </main>
   );

@@ -40,7 +40,7 @@ const MovieInfo = ({ movieInfo: { poster_path, title } }) => (
   <div>
     <img
       src={'https://image.tmdb.org/t/p/w500' + poster_path}
-      width="200"
+      width="320"
       alt={title}
     ></img>
     <p>{title}</p>

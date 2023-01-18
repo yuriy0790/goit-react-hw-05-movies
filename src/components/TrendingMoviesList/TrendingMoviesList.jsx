@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 // import styles from './ImageGallery.module.css';
 // import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import styled from 'styled-components';
+
 import { Link, useLocation } from 'react-router-dom';
 
 const List = styled('ul')`

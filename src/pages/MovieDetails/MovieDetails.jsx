@@ -41,6 +41,7 @@ const MovieDetails = () => {
 
   const [movieInfo, setMovieInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -76,7 +77,6 @@ const MovieDetails = () => {
 
   return (
     <main>
-      {/* не працює go-back після відкриття акторів або рецензій (переходить на '/') */}
       <Link to={location.state?.from ?? '/'}>GO BACK</Link>
       {isLoading ? (
         <Loader />
@@ -84,8 +84,12 @@ const MovieDetails = () => {
         movieInfo && <MovieInfo movieInfo={movieInfo} />
       )}
       <h2>Additional information</h2>
-      <LinkItem to={'cast'}>Cast</LinkItem>
-      <LinkItem to={'reviews'}>Reviews</LinkItem>
+      <LinkItem to={'cast'} state={{ from: location.state.from }}>
+        Cast
+      </LinkItem>
+      <LinkItem to={'reviews'} state={{ from: location.state.from }}>
+        Reviews
+      </LinkItem>
       <Outlet />
     </main>
   );

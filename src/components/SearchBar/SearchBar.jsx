@@ -1,9 +1,12 @@
-import styles from './SearchBar.module.css';
 import Notiflix from 'notiflix';
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
-export default function SearchBar({ onSubmit }) {
+import styles from './SearchBar.module.css';
+
+export default function SearchBar() {
   const [query, setQuery] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleChange = event => {
     setQuery(event.currentTarget.value.toLowerCase());
@@ -16,8 +19,7 @@ export default function SearchBar({ onSubmit }) {
       Notiflix.Notify.failure(`Enter search query`);
       return;
     }
-
-    onSubmit(query);
+    setSearchParams({ query: query });
     reset();
   };
 

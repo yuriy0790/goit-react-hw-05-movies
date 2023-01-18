@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 // import styles from './ImageGallery.module.css';
 // import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const List = styled('ul')`
   display: flex;
@@ -36,20 +36,23 @@ const LinkItem = styled(Link)`
   }
 `;
 
-const TrendingMoviesList = ({ trendingMovies }) => (
-  <List>
-    {trendingMovies.map(({ id, title, poster_path }) => (
-      <LinkItem to={`/movies/${id}`} key={id}>
-        <img
-          src={'https://image.tmdb.org/t/p/w500' + poster_path}
-          width="70px"
-          alt={title}
-        ></img>
-        <p>{title}</p>
-      </LinkItem>
-    ))}
-  </List>
-);
+const TrendingMoviesList = ({ trendingMovies }) => {
+  const location = useLocation();
+  return (
+    <List>
+      {trendingMovies.map(({ id, title, poster_path }) => (
+        <LinkItem to={`/movies/${id}`} key={id} state={{ from: location }}>
+          <img
+            src={'https://image.tmdb.org/t/p/w500' + poster_path}
+            width="70px"
+            alt={title}
+          ></img>
+          <p>{title}</p>
+        </LinkItem>
+      ))}
+    </List>
+  );
+};
 export default TrendingMoviesList;
 
 TrendingMoviesList.propTypes = {
